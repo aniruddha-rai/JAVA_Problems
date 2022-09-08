@@ -1,3 +1,5 @@
+package JAVA_6;
+
 import java.util.Scanner;
 
 public class CN6_Assignment {
