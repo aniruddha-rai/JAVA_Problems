@@ -88,17 +88,16 @@ public class CN6_Assignment4 {
         for (int i=0;i<num;i++){
            arr[i] = read.nextInt();
         }
-        for (int i=0;i<num;i++){
-            if (arr[i+1] == (arr[i]+1)){
-                System.out.println(arr[i+1]);
-                System.out.println(arr[i]+1);
+        for (int i=1;i<num;i++){
+            if (arr[i] == (arr[i]-1)){
+//                System.out.println(arr[i]);
+//                System.out.println(arr[i]-1);
                 count++;
             }
+            else count = 0;
         }
-
         if (count > 0){
             System.out.println("TRUE");
-        }
-
+        } else System.out.println("FALSE");
     }
 }
