@@ -29,5 +29,18 @@ Problem Description: #### Given a number N, find its square root. You need to fi
 
 package JAVA_6;
 
+import java.util.Scanner;
+
 public class CN6_Assignment5 {
+    public static void main(String[] args) {
+        Scanner read = new Scanner(System.in);
+        int num = read.nextInt();
+        int i = 1, result = 1;
+
+        while (result <= num) {
+            i++;
+            result = i * i;
+        }
+        System.out.println(i-1);
+    }
 }
