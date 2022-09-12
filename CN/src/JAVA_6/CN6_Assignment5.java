@@ -35,12 +35,16 @@ public class CN6_Assignment5 {
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
         int num = read.nextInt();
-        int i = 1, result = 1;
+        if (num == 0 || num == 1) {
+            System.out.println(num);
+        } else {
+            int i = 1, result = 1;
 
-        while (result <= num) {
-            i++;
-            result = i * i;
+            while (result <= num) {
+                i++;
+                result = i * i;
+            }
+            System.out.println(i - 1);
         }
-        System.out.println(i-1);
     }
 }
