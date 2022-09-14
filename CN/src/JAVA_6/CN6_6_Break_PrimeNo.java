@@ -2,7 +2,7 @@ package JAVA_6;
 
 import java.util.Scanner;
 
-public class CN6_6_PrimeNo {
+public class CN6_6_Break_PrimeNo {
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
         int num = read.nextInt();
