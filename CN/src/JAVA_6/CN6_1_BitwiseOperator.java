@@ -1,6 +1,6 @@
 package JAVA_6;
 
-public class CN6_BitwiseOperator {
+public class CN6_1_BitwiseOperator {
     public static void main(String[] args) {
 
         System.out.println(2 & 3);  // Bitwise AND

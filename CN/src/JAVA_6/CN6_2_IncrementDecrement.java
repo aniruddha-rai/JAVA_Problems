@@ -2,7 +2,7 @@
 
 package JAVA_6;
 
-public class CN6_IncrementDecrement {
+public class CN6_2_IncrementDecrement {
     public static void main(String[] args) {
 
         int a = 10;

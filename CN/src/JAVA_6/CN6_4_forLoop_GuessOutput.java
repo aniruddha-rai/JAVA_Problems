@@ -1,6 +1,6 @@
 package JAVA_6;
 
-public class CN6_forLoop_GuessOutput {
+public class CN6_4_forLoop_GuessOutput {
     public static void main(String[] args) {
         for(int i = 0; i < 2; i = i + 1) {
             for(int j = 0; j < 2; j = j + 1) {
