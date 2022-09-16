@@ -2,7 +2,7 @@ package JAVA_8_Arrays;
 
 import java.util.Scanner;
 
-public class Cn8_4_LinearSearch {
+public class CN8_4_LinearSearch {
 
     public static void linearSearch(int size, int[] arr, int findNum){
         boolean flag = true;
