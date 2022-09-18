@@ -47,24 +47,33 @@ public class CN_8_5_ArrangeNumInArray {
 
     public static void oddResult(int num){
         int start = 1;
+            System.out.print(start + " ");
+            while (start < num) {
+                start += 2;
+                System.out.print(start + " ");
+            }
+            while (start >= 2) {
+                if (start == num) start--;
+                System.out.print(start + " ");
+                start -= 2;
+            }
+        System.out.println();
 
     }
 
     public static void evenResult(int num){
         int start = 1;
-        for(int i=0;i<num;i++){
             System.out.print(start + " ");
             while (start < num) {
                 start += 2;
                 if (start > num) start--;
                 System.out.print(start + " ");
             }
-                while (start == 2){
-                    System.out.println("2");
-                    start -= 2;
-                    System.out.print(start + " ");
+            while (start >= 2) {
+                start -= 2;
+                System.out.print(start + " ");
+                if (start == 2) start--;
             }
-        }
         System.out.println();
     }
 
