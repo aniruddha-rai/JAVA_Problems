@@ -43,7 +43,7 @@ package JAVA_8_Arrays;
 
 import java.util.Scanner;
 
-public class CN_8_5_ArrangeNumInArray {
+public class CN8_5_ArrangeNumInArray {
 
     public static void oddResult(int num){
         int start = 1;
