@@ -14,9 +14,8 @@ public class CN8_6_HowArrayStored {
     }
 
     public static void incrementArray(int[] arr){
-//        arr = new int[5];     --> This will create a new arr which refer a different address so arr of main will not reflect
         for (int i=0;i<arr.length;i++){
-            arr[i]++;
+            arr[i]++;   // --> This whill create a new variable but refering to the same address so values will reflect
         }
     }
 
