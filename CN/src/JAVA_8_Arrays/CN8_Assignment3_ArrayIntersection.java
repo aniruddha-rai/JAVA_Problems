@@ -70,7 +70,7 @@ import java.util.Scanner;
 
 public class CN8_Assignment3_ArrayIntersection {
 
-   public static boolean union(int find, int count, int[] arr){
+   public static boolean union(int find, int[] arr, int itr){
             boolean flag = false;
             for (int j=0;j<arr.length;j++){
                 if (find == arr[j]){
@@ -84,34 +84,36 @@ public class CN8_Assignment3_ArrayIntersection {
 
         public static void main(String[] args) {
             Scanner read = new Scanner(System.in);
-            int n1 = read.nextInt();
-            int n2 = read.nextInt();
-            int count = 0;
-            int[] arr1 = new int[n1];
-            int[] arr2 = new int[n2];
-            for (int i=0;i<n1;i++){
-                arr1[i] = read.nextInt();
-            }
-            for (int i=0;i<n2;i++){
-                arr2[i] = read.nextInt();
-            }
+            int n = read.nextInt();
+            for (int k=0;k<n;k++) {
+                int n1 = read.nextInt();
+//                int count = 0;
+                int[] arr1 = new int[n1];
+                for (int i = 0; i < n1; i++) {
+                    arr1[i] = read.nextInt();
+                }
+                int n2 = read.nextInt();
+                int[] arr2 = new int[n2];
+                for (int i = 0; i < n2; i++) {
+                    arr2[i] = read.nextInt();
+                }
 
-            if (n1 > n2) {
-                count = n1;
-                for (int i=0;i<n2;i++) {
-                    boolean result = union(arr2[i], count, arr1);
-                    if (result == false) count++;
+                if (n1 > n2) {
+//                    count = n1;
+                    for (int i = 0; i < n2; i++) {
+                        boolean result = union(arr2[i], arr1, i);
+//                        if (result == false) count++;
+                    }
+                } else {
+//                    count = n2;
+                    for (int i = 0; i < n1; i++) {
+                        boolean result = union(arr1[i], arr2, i);
+//                        if (result == false) count++;
+                    }
                 }
             }
-            else{
-                count = n2;
-                for (int i=0;i<n1;i++) {
-                    boolean result = union(arr1[i], count, arr2);
-                    if (result == false) count++;
-                }
-            }
 
-            System.out.println(count);
+//            System.out.println(count);
 
 //                for (int i=0;i<n1;i++){
 //            for (int j=0;j<n2;j++){
