@@ -63,10 +63,22 @@ package JAVA_8_Arrays;
 import java.util.Scanner;
 
 public class CN8_Assignment4_PairSum {
+//    public static void pairSum(int[] arr, int findSum){
+//        int count = 0;
+//        for (int i=0;i<arr.length;i++){
+//            for (int j=0;j<arr.length && j != i;j++){
+//                if (arr[i] + arr[j] == findSum){
+//                    count++;
+//                }
+//            }
+//        }
+//        System.out.println(count);
+//    }
+
     public static void pairSum(int[] arr, int findSum){
         int count = 0;
-        for (int i=0;i<arr.length;i++){
-            for (int j=0;j<arr.length && j != i;j++){
+        for (int i=0;i<arr.length-1;i++){
+            for (int j=i+1;j<arr.length;j++){
                 if (arr[i] + arr[j] == findSum){
                     count++;
                 }
