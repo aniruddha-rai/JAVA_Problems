@@ -51,6 +51,8 @@ Problem Description:
 
 package JAVA_8_Arrays;
 
+import org.w3c.dom.Attr;
+
 import java.util.Scanner;
 
 public class CN8_Assignment1_FindUnique {
@@ -66,11 +68,25 @@ public class CN8_Assignment1_FindUnique {
         return flag;
     }
 
+//    public static void findUnique(int[] arr){
+//        for (int i=0;i<arr.length;i++){
+//            boolean unique = linearSearch(arr, i, arr[i]);
+//            if (unique == false){
+//                System.out.println(arr[i]);
+//            }
+//        }
+//    }
+
     public static void findUnique(int[] arr){
+        boolean flag = false;
         for (int i=0;i<arr.length;i++){
-            boolean unique = linearSearch(arr, i, arr[i]);
-            if (unique == false){
-                System.out.println(arr[i]);
+            for (int j=0;j<arr.length && j != i;j++){
+                if (arr[i] != arr[j]){
+                    flag = true;
+                    System.out.println(arr[i]);
+                }else if (arr[i] == arr[j]){
+                    flag = false;
+                }
             }
         }
     }
