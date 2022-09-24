@@ -3,13 +3,30 @@ package JAVA_8_Arrays;
 import java.util.Scanner;
 
 public class CN8_Assignment16_SumOf2Array {
-    public static void sum(int[] arr1, int[]arr2){
-        int[] arr = new int[arr1.length];
-        for (int i = arr1.length-1;i>=0;i--){
-            arr[i] = arr1[i] + arr2[i];
+    public static void sum(int[] arr1, int[]arr2, int[] arr){
+        int carry = 0;
+        int i = arr1.length-1;
+        int j = arr2.length-1;
+        int k = arr.length-1;
+        while (k >= 0){
+            int digit = carry;
+
+            if (i>=0) digit += arr[i];
+            if (j>=0) digit += arr[j];
+
+            carry = digit/10;
+            digit = digit%10;
+
+            arr[k] = digit;
+            i--;
+            j--;
+            k--;
         }
-        for (int i=0;i<arr.length;i++){
-            System.out.print(arr[i] + " ");
+        if (carry != 0){
+            System.out.print(carry + " ");
+        }
+        for (int val: arr){
+            System.out.print(val + " ");
         }
     }
 
@@ -27,7 +44,13 @@ public class CN8_Assignment16_SumOf2Array {
             for (int k=0;k<n2;k++){
                 arr2[k] = read.nextInt();
             }
-            sum(arr1, arr2);
+            if (n1>n2){
+                int[] arr = new int[n1];
+                sum(arr1, arr2, arr);
+            }else {
+                int[] arr = new int[n2];
+                sum(arr1, arr2, arr);
+            }
         }
     }
 }
