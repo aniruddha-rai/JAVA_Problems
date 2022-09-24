@@ -20,8 +20,5 @@ public class CN10_1_StringUse {
 
         System.out.println(str.contains("nir"));
         System.out.println(str.contains("ani"));
-
-        System.out.println(str.concat(" Rai"));
-        System.out.println(str);
     }
 }
