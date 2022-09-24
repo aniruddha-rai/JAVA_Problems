@@ -1,9 +1,8 @@
 package JAVA_10_Strings;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class CN_5_MoreUseOfString {
+public class CN10_5_MoreUseOfString {
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
 
