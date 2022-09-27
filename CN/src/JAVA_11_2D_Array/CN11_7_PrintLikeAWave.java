@@ -56,7 +56,7 @@ package JAVA_11_2D_Array;
 
 import java.util.Scanner;
 
-public class CN11_5_PrintLikeAWave {
+public class CN11_7_PrintLikeAWave {
 
     public static void printWave(int row, int column, int[][] arr) {
         for (int i=0;i<column;i++){

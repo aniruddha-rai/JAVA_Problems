@@ -67,7 +67,7 @@ package JAVA_11_2D_Array;
 
 import java.util.Scanner;
 
-public class CN11_4_LargestRowOrColumn {
+public class CN11_6_LargestRowOrColumn {
 
     public static void columnSum(int row, int column, int[][] arr, int rowMax, int rowIndex) {
         int sum = 0;
