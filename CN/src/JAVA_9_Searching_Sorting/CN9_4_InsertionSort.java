@@ -50,6 +50,7 @@ import java.util.Scanner;
 
 public class CN9_4_InsertionSort {
 
+    // Time Complexity = O(n^2)
     public static void insertionSort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             int temp = arr[i];
