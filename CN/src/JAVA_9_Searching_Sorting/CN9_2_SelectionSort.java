@@ -16,6 +16,7 @@ import java.util.Scanner;
 
 public class CN9_2_SelectionSort {
 
+    // Time Complexity = O(n^2)
     public static void selectionSort(int[] arr){
         for (int i=0;i<arr.length-1;i++) {
             int min = arr[i];
@@ -29,13 +30,14 @@ public class CN9_2_SelectionSort {
             if (minIndex != i) {
                 arr[minIndex] = arr[i];
                 arr[i] = min;
+            }
+            // Swap
 //              int temp = arr[i];
 //              arr[i] = arr[minIndex];
 //              arr[minIndex] = temp;
-            }
         }
-        for (int i=0;i<arr.length;i++){
-            System.out.print(arr[i] + " ");
+        for (int j : arr) {
+            System.out.print(j + " ");
         }
         System.out.println();
     }
