@@ -37,16 +37,32 @@ public class StudentUse {
 //        System.out.println(student2.getRollNumber());
 
 
+//        // Using custom constructor
+//        // For public and private access modifier
+//        Student student0 = new Student();
+//        Student student1 = new Student("Aniruddha");
+//        Student student2 = new Student("Ankush", 121);
+//
+//        student0.print();
+//        student1.print();
+//        student2.print();
+
+
         // Using custom constructor
         // For public and private access modifier
-        Student student0 = new Student();
-        Student student1 = new Student("Aniruddha");
+        Student student1 = new Student("Aniruddha", 12);
         Student student2 = new Student("Ankush", 121);
 
-        student0.print();
         student1.print();
         student2.print();
 
+//        System.out.println(student1.numStudents);
+//        System.out.println(student2.numStudents);
+//        System.out.println(Student.numStudents);
+//        Student.numStudents = 10; ---> To overcome this we make this as private
+
+        System.out.println(Student.getNumStudents());
+//        System.out.println(student1.getNumStudents());    ---> not recommended
 
     }
 }
