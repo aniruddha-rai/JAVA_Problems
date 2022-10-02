@@ -1,3 +1,5 @@
+package JAVA_1_to_5;
+
 import java.util.Scanner;
 
 public class CN3_whileLoop {

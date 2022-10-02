@@ -1,4 +1,4 @@
-// LARGEST OF THREE NUMBERS
+package JAVA_1_to_5;// LARGEST OF THREE NUMBERS
 
 import java.util.Scanner;
 
