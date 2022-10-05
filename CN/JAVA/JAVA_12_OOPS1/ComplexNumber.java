@@ -3,6 +3,7 @@ package JAVA_12_OOPS1;
 public class ComplexNumber {
     private int real;
     private int imaginary;
+    private boolean flag = false;
 
     public ComplexNumber(int real, int imaginarya){
         this.real = real;
@@ -25,8 +26,13 @@ public class ComplexNumber {
         this.imaginary = i;
     }
 
-    public void print(){
-        System.out.println(real+" + "+imaginary+"i");
+    public void print() {
+        if (flag == true) {
+            // TODO Error out
+            System.out.println(real + " - " + imaginary + "i");
+        } else {
+            System.out.println(real + " + " + imaginary + "i");
+        }
     }
 
     public void add(ComplexNumber c2){
@@ -47,7 +53,9 @@ public class ComplexNumber {
     }
 
     public ComplexNumber conjugate(){
-
+        flag = true;
+        ComplexNumber c1 = new ComplexNumber(this.real, this.imaginary);
+        return c1;
     }
 
 }
