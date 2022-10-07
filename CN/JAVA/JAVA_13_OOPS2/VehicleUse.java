@@ -13,6 +13,7 @@ public class VehicleUse {
         c.color = "Red";
         c.setMaxSpeed(100);
         c.print();
-        c.printCar();
+//        c.printCar(); ---> If parent class and child class have same function let's say print then,
+//        First it will search in car class if exist will print or else search in parent class then print
     }
 }
