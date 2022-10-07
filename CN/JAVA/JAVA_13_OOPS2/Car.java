@@ -8,9 +8,11 @@ public class Car extends Vehicle {
     int numGears;
     boolean isConvertible;
 
-    public void printCar(){
-        System.out.println("Car Color : " + color);
-        System.out.println("Car Max Speed : " + getMaxSpeed());
+    public void print(){
+//        System.out.println("Car Color : " + color);
+//        System.out.println("Car Max Speed : " + getMaxSpeed());
+        // Instead --->
+        super.print();
         System.out.println("Car numGears : " + numGears);
         System.out.println("Car isConvertible : " + isConvertible);
     }
