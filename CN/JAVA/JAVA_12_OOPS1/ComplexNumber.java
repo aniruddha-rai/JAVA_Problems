@@ -5,9 +5,9 @@ public class ComplexNumber {
     private int imaginary;
     private boolean flag = false;
 
-    public ComplexNumber(int real, int imaginarya){
+    public ComplexNumber(int real, int imaginaryArr){
         this.real = real;
-        this.imaginary = imaginarya;
+        this.imaginary = imaginaryArr;
     }
 
     public int getReal(){
