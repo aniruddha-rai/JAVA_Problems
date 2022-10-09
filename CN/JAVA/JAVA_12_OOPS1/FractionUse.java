@@ -1,7 +1,12 @@
 package JAVA_12_OOPS1;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+
 public class FractionUse {
-    public static void main(String[] args) {
+    // Either we throw exception or handle it
+//    public static void temp() throws ZeroDenominatorException{
+    public static void temp(){
         Fraction f1 = new Fraction(20,30);
         f1.print();
 
@@ -11,7 +16,21 @@ public class FractionUse {
         f1.print();
 
         f1.setNumerator(10);
-        f1.setDenominator(30);
+
+        // Handling Exception
+        int i = 67;
+        try {
+            f1.setDenominator(0);
+            i++;        // Runs only in case of no exception
+        } catch (ZeroDenominatorException e){
+            System.out.println("Hey don't input 0 as Denominator!");    // Runs only in case of exception
+        } finally {     // Runs everytime either exception occurs or not (Common code of try and catch will execute in finally)
+
+        }
+        System.out.println(i); // when we trigger exception then next line will not be executed
+
+//        f1.setDenominator(0);
+
         f1.print();
 
         Fraction f2 = new Fraction(3,4);
@@ -28,6 +47,22 @@ public class FractionUse {
         f1.print();
         f3.print();
         f4.print();
+
+    }
+
+    public static void main(String[] args) throws ZeroDenominatorException{
+        temp();
+
+//        String s = "";
+//        File f;
+//        try {
+//            f = new File(s);
+//            // f.close();
+//        } catch (FileNotFoundException){
+//            // f.close();
+//        } finally {
+//            f.close();
+//        }
 
     }
 }
