@@ -24,4 +24,14 @@ public class Car extends Vehicle {
         System.out.println("Car numGears : " + numGears);
         System.out.println("Car isConvertible : " + isConvertible);
     }
+
+
+    // POLYMORPHISM ------------------------------------------------------------------------------------>
+
+    public boolean isConvertible() {
+        return isConvertible;
+    }
+
+
+
 }
