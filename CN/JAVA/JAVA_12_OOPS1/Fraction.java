@@ -41,10 +41,33 @@ public class Fraction {
         simplify();
     }
 
-    public void setDenominator(int d){
+//    public void setDenominator(int d){
+//        if (d == 0){
+//            // TODO Error out
+//            return;
+//        }
+//        this.denominator = d;
+//        simplify();
+//    }
+
+    // Common Exception
+//    public void setDenominator(int d) throws Exception{
+//        if (d == 0){
+//            // TODO Error out
+//            Exception e = new Exception("Denominator can't be 0");
+//            throw e;
+//            // return;
+//        }
+//        this.denominator = d;
+//        simplify();
+//    }
+
+    public void setDenominator(int d) throws ZeroDenominatorException{
         if (d == 0){
             // TODO Error out
-            return;
+            ZeroDenominatorException e = new ZeroDenominatorException();
+            throw e;
+            // return;
         }
         this.denominator = d;
         simplify();
