@@ -19,7 +19,6 @@ public class CN14_1_Factorial {
         if (n == 0){
             return 1;
         }
-
         int smallFact = fact(n-1);
         return n*smallFact;
     }
