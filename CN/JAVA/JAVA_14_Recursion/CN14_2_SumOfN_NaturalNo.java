@@ -11,7 +11,7 @@ public class CN14_2_SumOfN_NaturalNo {
     }
 
     public static void main(String[] args) {
-        int n = 5;
+        int n = 8;
         int ans = sum(n);
         System.out.println(ans);
     }
