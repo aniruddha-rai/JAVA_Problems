@@ -49,9 +49,26 @@ public class CN14_8_CheckSorted {
 
     }
 
+
+    // This function checks if the array is sorted from the startIndex to the endIndex
+    public static boolean checkSortedBetter(int input[], int startIndex){
+        if (startIndex >= input.length-1){
+            return true;
+        }
+
+        if (input[startIndex] > input[startIndex+1]){
+            return false;
+        }
+
+        boolean smallAns = checkSortedBetter(input, startIndex+1);
+        return smallAns;
+
+    }
+
     public static void main(String[] args) {
         int[] arr = {1,3,5,6,9};
         System.out.println(checkSorted(arr));
         System.out.println(checkSorted_2(arr));
+        System.out.println(checkSortedBetter(arr, 0));
     }
 }
