@@ -30,21 +30,34 @@ package JAVA_14_Recursion;
 
 public class CN14_11_PrintFirstIndex {
 
-    public static int firstIndex(int[] arr, int n, int num){
-        if (n == arr.length-1){
+    // Without Recursion
+//    public static int firstIndex(int[] arr, int num){
+//        int ans = 0;
+//        for (int i=0;i<arr.length;i++){
+//            if (arr[i] == num){
+//                ans = i;
+//                break;
+////                System.out.println(i);
+//            }
+//        }
+//        return ans;
+//    }
+
+    // With Recursion
+    public static int firstIndex(int[] arr, int num, int i, boolean flag){
+        if (i > arr.length-1){
             return -1;
         }
-
-        if (arr[n] == num){
-            return n;
+        if (arr[i] == num){
+            return i;
         }
-
-        return firstIndex(arr, n++, num);
+        i++;
+        return firstIndex(arr, num, i, flag);
     }
 
     public static void main(String[] args) {
-        int[] arr = {9,8,10};
+        int[] arr = {9,8,10,8};
         int num = 8;
-        System.out.println(firstIndex(arr, 0, num));
+        System.out.println(firstIndex(arr, num, 0, false));
     }
 }
