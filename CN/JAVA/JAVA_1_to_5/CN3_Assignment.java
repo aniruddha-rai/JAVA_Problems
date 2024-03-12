@@ -55,5 +55,23 @@ public class CN3_Assignment {
 //        float totalSalary = (salary + hra + da + allow - pf);
 //
 //        System.out.println(Math.round(totalSalary));
+
+//        Scanner read = new Scanner(System.in);
+//        float salary = read.nextFloat();
+//        String grade = read.next().toUpperCase();
+//        float hra = (float) (salary * 0.2);
+//        float da = (float) (salary * 0.5);
+//        float pf = (float) (salary * 0.11);
+//        int allow = 0;
+//        if (grade.charAt(0) == 'A') {
+//            allow = 1700;
+//        } else if (grade.charAt(0) == 'B') {
+//            allow = 1500;
+//        } else {
+//            allow = 1300;
+//        }
+//
+//        float totalSalary = salary + hra + da + allow - pf;
+//        System.out.println(Math.round(totalSalary));
     }
 }
