@@ -6,6 +6,28 @@ public class CN {
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
 
+        char c = 'a';
+        System.out.println(c + 3); // 100
+
+        int i = c + 10;
+        System.out.println(i);  // 107
+
+        i = c;
+        // char ab = i;      ---> Cannot assign a more space data (4 bytes) into less space memory (2 bytes)
+        long l = i;
+        // i = l;
+
+        double d = i;
+        // i = d;
+
+        float f = (float) 1.23;
+        float f2 = 1.23f;
+        // f = d;
+        d = f;
+
+        int j = 100;
+
+
 //        int var1 = 5;
 //        int var2 = 6;
 //        if ((var2 = 1) == var1)
