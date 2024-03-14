@@ -5,17 +5,25 @@ import java.util.Scanner;
 public class CN {
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
+        int d3 = 'a' + 4;
+        System.out.println(d3);
 
         char c = 'a';
-        System.out.println(c + 3); // 100
+//        System.out.println(c + 3); // 100
 
         int i = c + 10;
-        System.out.println(i);  // 107
+//        System.out.println(i);  // 107
 
         i = c;
         // char ab = i;      ---> Cannot assign a more space data (4 bytes) into less space memory (2 bytes)
         long l = i;
         // i = l;
+        System.out.println(l);
+        System.out.println(i);
+
+        l = 1232524623112123L;
+        i = (int) l;
+        System.out.println(i);
 
         double d = i;
         // i = d;
