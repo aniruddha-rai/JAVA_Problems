@@ -6,6 +6,11 @@ public class CN2 {
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
 
+        double a = 6 / 4;
+        int b  = 6 / 4;
+        double c = a + b;
+        System.out.println(c);
+
         // LOGICAL OPERATORS
 
 //        int a = read.nextInt();
