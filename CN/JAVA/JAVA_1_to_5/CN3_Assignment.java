@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class CN3_Assignment {
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
+
+        // Power of a number
+
         int base = read.nextInt();
         int power = read.nextInt();
         int i=0;
@@ -16,6 +19,7 @@ public class CN3_Assignment {
         System.out.println(ans);
 
 
+        // Sum of even and odd numbers
 
 //        long num = read.nextLong();
 //        long even = 0;
@@ -33,6 +37,8 @@ public class CN3_Assignment {
 //        System.out.println(even + " " + odd);
 
 
+
+        // Total Salary
 
 //        float salary = read.nextInt();
 //        String grade = read.next().toUpperCase();
