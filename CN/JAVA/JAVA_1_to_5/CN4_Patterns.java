@@ -1,5 +1,12 @@
 package JAVA_1_to_5;
 
+/*
+    Need to figure out these below points to start printing patters:
+    1. Number of rows
+    2. Number of columns in ith row
+    3. What to print
+ */
+
 import java.util.Scanner;
 
 public class CN4_Patterns {
