@@ -393,18 +393,115 @@ public class CN4_Pattern_Problems {
         //        BCDE
         //        ABCDE
 
-        int i = 1;
-        while (i <= n) {
-            int j = 1;
-            int t = n-i;
-            while (j <= i) {
-                System.out.print((char)('A' + t));
-                t++;
-                j++;
-            }
-            System.out.println();
-            i++;
-        }
+//        int i = 1;
+//        while (i <= n) {
+//            int j = 1;
+//            int t = n-i;
+//            while (j <= i) {
+//                System.out.print((char)('A' + t));
+//                t++;
+//                j++;
+//            }
+//            System.out.println();
+//            i++;
+//        }
+
+
+//        REVERSE TRIANGULAR PATTERNS ---------------------------------------------------------------------->
+
+        //           *
+        //          **
+        //         ***
+        //        ****
+
+//        int i = 1;
+//        while (i <= n) {
+//            int j = 1;
+//            while (j <= n-i) {
+//                System.out.print(" ");
+//                j++;
+//            }
+//            j = 1;
+//            while (j <= i) {
+//                System.out.print("*");
+//                j++;
+//            }
+//            System.out.println();
+//            i++;
+//        }
+
+        //        ****
+        //        ***
+        //        **
+        //        *
+
+//        int i = 1;
+//        while (i <= n) {
+//            int j = 1;
+//            while (j <= n - i + 1) {
+//                System.out.print("*");
+//                j++;
+//            }
+//            System.out.println();
+//            i++;
+//        }
+
+        //        ****
+        //        ***_
+        //        **__
+        //        *___
+
+//        int i = 1;
+//        while (i <= n) {
+//            int j = 1;
+//            while (j <= n - i + 1) {
+//                System.out.print("*");
+//                j++;
+//            }
+//            j = 1;
+//            while (j < i) {
+//                System.out.print("_");
+//                j++;
+//            }
+//            System.out.println();
+//            i++;
+//        }
+
+        // INVERTED NUMBER PATTERNS
+
+        //        4444
+        //        333
+        //        22
+        //        1
+
+//        int i = 1;
+//        while (i <= n) {
+//            int j = n - i + 1;
+//            while (j > 0) {
+//                System.out.print(n - i + 1);
+//                j--;
+//            }
+//            System.out.println();
+//            i++;
+//        }
+
+        //        4321
+        //        321
+        //        21
+        //        1
+
+//        int i = 1;
+//        while (i <= n) {
+//            int j = n - i + 1;
+//            while (j > 0) {
+//                System.out.print(j);
+//                j--;
+//            }
+//            System.out.println();
+//            i++;
+//        }
+
+
 
     }
 }
