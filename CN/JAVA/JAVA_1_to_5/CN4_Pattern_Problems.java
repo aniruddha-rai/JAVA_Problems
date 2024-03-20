@@ -467,7 +467,7 @@ public class CN4_Pattern_Problems {
 //            i++;
 //        }
 
-        // INVERTED NUMBER PATTERNS
+        // INVERTED NUMBER PATTERNS ----------------------->
 
         //        4444
         //        333
@@ -496,6 +496,85 @@ public class CN4_Pattern_Problems {
 //            while (j > 0) {
 //                System.out.print(j);
 //                j--;
+//            }
+//            System.out.println();
+//            i++;
+//        }
+
+        // ISOSCELES TRIANGLE ----------------------->
+
+        //           1
+        //          121
+        //         12321
+        //        1234321
+
+//        int i = 1;
+//        while (i <= n) {
+//            int j = 1;
+//            while (j <= n - i) {
+//                System.out.print(" ");
+//                j++;
+//            }
+//            j = 1;
+//            while (j <= i) {
+//                System.out.print(j);
+//                j++;
+//            }
+//            j = 1;
+//            while (j <= i - 1) {
+//                System.out.print(i - j);
+//                j++;
+//            }
+//            System.out.println();
+//            i++;
+//        }
+
+//        OR
+
+//        int i = 1;
+//        while (i<=n) {
+//            int spaces = 1;
+//            while (spaces <= n-i){
+//                System.out.print(" ");
+//                spaces++;
+//            }
+//            int j = 1;
+//            while (j <= i){
+//                System.out.print(j);
+//                j++;
+//            }
+//            int k = i-1;
+//            j = 1;
+//            while (j <= i-1){
+//                System.out.print(k);
+//                k--;
+//                j++;
+//            }
+//            System.out.println();
+//            i++;
+//        }
+
+        //           *
+        //          ***
+        //         *****
+        //        *******
+
+//        int i = 1;
+//        while (i <= n) {
+//            int j = 1;
+//            while (j <= n - i) {
+//                System.out.print(" ");
+//                j++;
+//            }
+//            j = 1;
+//            while (j <= i) {
+//                System.out.print("*");
+//                j++;
+//            }
+//            j = 1;
+//            while (j <= i - 1) {
+//                System.out.print("*");
+//                j++;
 //            }
 //            System.out.println();
 //            i++;
