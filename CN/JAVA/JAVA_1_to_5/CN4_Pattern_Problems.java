@@ -581,10 +581,10 @@ public class CN4_Pattern_Problems {
 //        }
 
         int i = 1;
-        while (i <= n) {
+        while (i <= n/2 + 1) {
             int j = 1;
             while (j <= n - i) {
-                System.out.print(" ");
+                System.out.print("_");
                 j++;
             }
             j = 1;
@@ -597,10 +597,27 @@ public class CN4_Pattern_Problems {
                 System.out.print("*");
                 j++;
             }
+
             System.out.println();
             i++;
         }
+        int k = 1;
+        int median = n/2;
+        while (k <= median) {
+            int l = 1;
+            while (l <= (median + 1) - k) {
+                System.out.print("_");
+                l++;
+            }
+            l = 1;
+            while (l <= k) {
+                System.out.print("*");
+                l++;
+            }
 
+            System.out.println();
+            k++;
+        }
 
     }
 }
