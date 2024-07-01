@@ -35,5 +35,19 @@ public class CN6_2_IncrementDecrement {
             System.out.print("Inside else  ");
         }
         System.out.println(x  + " " + y);
+
+
+        a = 4;
+        a *= 2;
+        System.out.println(a);
+
+        a ^= 2;
+        System.out.println(a);
+
+        int ans = 2 * 3 / 2;
+        System.out.println(ans);
+
+        int ans2 = 2 + 3 * 4;
+        System.out.println(ans2);
     }
 }
