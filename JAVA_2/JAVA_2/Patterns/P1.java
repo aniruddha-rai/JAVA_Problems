@@ -149,9 +149,43 @@ public class P1 {
         }
 
         // 0-1 Triangle
+        /*      1
+                0 1
+                1 0 1
+                0 1 0 1
+                1 0 1 0 1       */
         for (i=1;i<=num;i++) {
             for (j=1;j<=i;j++) {
-                System.out.print("*");
+                if (i%2 == 0)
+                    System.out.print("0");
+                else System.out.print("1");
+            }
+            System.out.println();
+        }
+
+        for (i=1;i<=num;i++) {
+            for (j=1;j<=i;j++) {
+                if (i%2 != 0) {
+                    if (j%2 == 0) {
+                        System.out.print("0"+" ");
+                    } else
+                        System.out.print("1"+" ");
+                } else {
+                    if (j%2 == 0) {
+                        System.out.print("1"+" ");
+                    } else
+                        System.out.print("0"+" ");
+                }
+            }
+            System.out.println();
+        }
+        // <<< ---------- OR ----------- >>>
+        for (i=1;i<=num;i++) {
+            for (j=1;j<=i;j++) {
+                if ((i+j) % 2 == 0) {
+                    System.out.print("1 ");
+                } else
+                    System.out.print("0 ");
             }
             System.out.println();
         }
