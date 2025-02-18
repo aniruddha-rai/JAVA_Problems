@@ -72,6 +72,57 @@ public class P2 {
 
 
         // PALINDROMIC PATTERN -------------------------------->>>>>>>
+        for (i=1;i<=num;i++) {
+            spaces = num-i;
+            for (j=1;j<=spaces;j++) {
+                System.out.print(" ");
+            }
+            for (k=i;k>0;k--) {
+                System.out.print(k);
+            }
+            for (j=2;j<=i;j++) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+
+        //   OR
+
+        for (i=1;i<=num;i++) {
+            spaces = num-i;
+            for (j=1;j<=spaces;j++) {
+                System.out.print("  ");
+            }
+            for (k=i;k>0;k--) {
+                System.out.print(k+" ");
+            }
+            for (j=2;j<=i;j++) {
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+
+
+        // DIAMOND PATTERN -------------------------------->>>>>>>
+        for (i=1;i<=num;i++) {
+            for (j=1;j<=num-i;j++) {
+                System.out.print("  ");
+            }
+            for (k=1;k<=i+(i-1);k++) {          // 2*i-1
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        for (i=num;i>0;i--) {
+            for (j=1;j<=num-i;j++) {
+                System.out.print("  ");
+            }
+            for (k=1;k<=i+(i-1);k++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
 
 
     }
