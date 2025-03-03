@@ -32,12 +32,12 @@ public class P3_Function {
         String task = read.next();
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < numOfDays; i++) {
-            result.append(String.valueOf(task.charAt(i)));
-            for (int j = 0; j < result.length(); j++) {
-                if (task.charAt(i) == result.charAt(j)) {
+//            result.append(String.valueOf(task.charAt(i)));
+            for (int j = i+1; j < task.length(); j++) {
+                if (task.charAt(i) == task.charAt(j)) {
                     output2 = "NO";
-                } else
-                    output2 = "YES";
+                    break;
+                }
             }
         }
         System.out.println(output2);
