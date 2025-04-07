@@ -266,7 +266,7 @@ public class CF {
             flag = true;
         else if (luckyNum.length() == 1 && (luckyNum.contains("4") || luckyNum.contains("7")))
             flag = true;
-        else if (luckyNum.length() > 1 && (luckyNum.contains("4") && luckyNum.contains("7"))) {
+        else if (luckyNum.length() > 1) {
             for (int i=0;i<luckyNum.length();i++) {
                 if (luckyNum.charAt(i) == '4' || luckyNum.charAt(i) == '7') {
                     flag = true;
@@ -283,6 +283,18 @@ public class CF {
             System.out.println("YES");
         else
             System.out.println("NO");
+
+
+        // <<<<<<<<<<< --- OR --- >>>>>>>>>>>
+            Scanner reader = new Scanner(System.in);
+            int num2 = reader.nextInt();
+            String res = "NO";
+            int[] arr = {4,7,44,47,74,77,444,447,477,777,774,744};
+            for(int i=0; i<arr.length; i++){
+                if(num2%arr[i]==0)
+                    res = "YES";
+            }
+            System.out.println(res);
 
     }
 }
