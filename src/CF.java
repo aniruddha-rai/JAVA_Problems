@@ -140,21 +140,6 @@ public class CF {
 //        }
 //        System.out.println(minWid thOfRoad);
 
-////      266B - Queue at the School
-//        Scanner read = new Scanner(System.in);
-//        int numOfStudent = read.nextInt();
-//        int time = read.nextInt();
-//        String arrangement = read.next();
-//        for (int i=0;i<arrangement.length()-1;i++) {
-//            char temp = 'a';
-//            if (arrangement.charAt(i) == 'B' && arrangement.charAt(i+1) == 'G') {
-//                arrangement.replace('B', 'G');
-//                i++;
-//            }
-//        }
-//        System.out.println(arrangement);
-
-
 
 //      1030A - In Search of an Easy Problem
 //        Scanner read = new Scanner(System.in);
@@ -235,6 +220,69 @@ public class CF {
 //        System.out.println(height);
 
 
+//////      266B - Queue at the School
+////        Scanner read = new Scanner(System.in);
+////        int numOfStudent = read.nextInt();
+////        int time = read.nextInt();
+////        String arrangement = read.next();
+////        for (int i=0;i<arrangement.length()-1;i++) {
+////            char temp = 'a';
+////            if (arrangement.charAt(i) == 'B' && arrangement.charAt(i+1) == 'G') {
+////                arrangement.replace('B', 'G');
+////                i++;
+////            }
+////        }
+////        System.out.println(arrangement);
+//
+//        Scanner read = new Scanner(System.in);
+//        int numOfChildren = read.nextInt();
+//        int time = read.nextInt();
+//        String arrangement = read.next();
+//        char[] charArray = new char[numOfChildren];
+//
+//        for (int i =0;i<numOfChildren;i++) {
+//            charArray[i] = arrangement.charAt(i);
+//        }
+//
+//        for (int i=0;i<numOfChildren;i++) {
+//            if (i+time < numOfChildren) {
+//                if (arrangement.charAt(i) == 'B' && arrangement.charAt(i + 1) == 'G') {
+//                    charArray[i] = 'G';
+//                    charArray[i + 1] = 'B';
+//                }
+//            }
+//        }
+//        for (int i =0;i<numOfChildren;i++) {
+//            System.out.print(charArray[i]);
+//        }
+
+
+//        122A - Lucky Division
+        Scanner read = new Scanner(System.in);
+        int num = read.nextInt();
+        boolean flag = false;
+        String luckyNum = String.valueOf(num);
+        if (num % 4 == 0 || num % 7 == 0)
+            flag = true;
+        else if (luckyNum.length() == 1 && (luckyNum.contains("4") || luckyNum.contains("7")))
+            flag = true;
+        else if (luckyNum.length() > 1 && (luckyNum.contains("4") && luckyNum.contains("7"))) {
+            for (int i=0;i<luckyNum.length();i++) {
+                if (luckyNum.charAt(i) == '4' || luckyNum.charAt(i) == '7') {
+                    flag = true;
+                } else {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        else
+            flag = false;
+
+        if (flag)
+            System.out.println("YES");
+        else
+            System.out.println("NO");
 
     }
 }
