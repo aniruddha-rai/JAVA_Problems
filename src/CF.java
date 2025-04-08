@@ -286,15 +286,15 @@ public class CF {
 
 
         // <<<<<<<<<<< --- OR --- >>>>>>>>>>>
-            Scanner reader = new Scanner(System.in);
-            int num2 = reader.nextInt();
-            String res = "NO";
-            int[] arr = {4,7,44,47,74,77,444,447,477,777,774,744};
-            for(int i=0; i<arr.length; i++){
-                if(num2%arr[i]==0)
-                    res = "YES";
-            }
-            System.out.println(res);
+        Scanner reader = new Scanner(System.in);
+        int num2 = reader.nextInt();
+        String res = "NO";
+        int[] arr = {4,7,44,47,74,77,444,447,477,777,774,744};
+        for(int i=0; i<arr.length; i++){
+            if(num2%arr[i]==0)
+                res = "YES";
+        }
+        System.out.println(res);
 
     }
 }
