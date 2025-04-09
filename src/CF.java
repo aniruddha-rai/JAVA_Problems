@@ -257,44 +257,80 @@ public class CF {
 //        }
 
 
-//        122A - Lucky Division
+////        122A - Lucky Division
+//        Scanner read = new Scanner(System.in);
+//        int num = read.nextInt();
+//        boolean flag = false;
+//        String luckyNum = String.valueOf(num);
+//        if (num % 4 == 0 || num % 7 == 0)
+//            flag = true;
+//        else if (luckyNum.length() == 1 && (luckyNum.contains("4") || luckyNum.contains("7")))
+//            flag = true;
+//        else if (luckyNum.length() > 1) {
+//            for (int i=0;i<luckyNum.length();i++) {
+//                if (luckyNum.charAt(i) == '4' || luckyNum.charAt(i) == '7') {
+//                    flag = true;
+//                } else {
+//                    flag = false;
+//                    break;
+//                }
+//            }
+//        }
+//        else
+//            flag = false;
+//
+//        if (flag)
+//            System.out.println("YES");
+//        else
+//            System.out.println("NO");
+//
+//
+//        // <<<<<<<<<<< --- OR --- >>>>>>>>>>>
+//        Scanner reader = new Scanner(System.in);
+//        int num2 = reader.nextInt();
+//        String res = "NO";
+//        int[] arr = {4,7,44,47,74,77,444,447,477,777,774,744};
+//        for(int i=0; i<arr.length; i++){
+//            if(num2%arr[i]==0)
+//                res = "YES";
+//        }
+//        System.out.println(res);
+
+//        30
+//        10 10 10 10 10 10 01 01 01 10 01 10 01 01 01 01 01 10 10 10 10 01 01 01 10 10 10 01 01 01
+        // 344A - Magnets
         Scanner read = new Scanner(System.in);
-        int num = read.nextInt();
-        boolean flag = false;
-        String luckyNum = String.valueOf(num);
-        if (num % 4 == 0 || num % 7 == 0)
-            flag = true;
-        else if (luckyNum.length() == 1 && (luckyNum.contains("4") || luckyNum.contains("7")))
-            flag = true;
-        else if (luckyNum.length() > 1) {
-            for (int i=0;i<luckyNum.length();i++) {
-                if (luckyNum.charAt(i) == '4' || luckyNum.charAt(i) == '7') {
-                    flag = true;
-                } else {
-                    flag = false;
-                    break;
-                }
+        int numOfMagnets = read.nextInt();
+        int count = 1;
+        int[] arrOfMagnets = new int[numOfMagnets];
+        for (int i=0;i<numOfMagnets;i++) {
+            arrOfMagnets[i] = read.nextInt();
+        }
+        for (int j=0;j<arrOfMagnets.length-1;j++) {
+//            if (arrOfMagnets[j] != arrOfMagnets[j+1]) {
+//                count++;
+//            }
+            if (arrOfMagnets[j] == arrOfMagnets[j+1]) {
+                continue;
             }
+            count++;
         }
-        else
-            flag = false;
+        System.out.println("Number of groups of magnets are " + count);
 
-        if (flag)
-            System.out.println("YES");
-        else
-            System.out.println("NO");
+        // <<<<<<< ----- OR ----- >>>>>>>
 
-
-        // <<<<<<<<<<< --- OR --- >>>>>>>>>>>
-        Scanner reader = new Scanner(System.in);
-        int num2 = reader.nextInt();
-        String res = "NO";
-        int[] arr = {4,7,44,47,74,77,444,447,477,777,774,744};
-        for(int i=0; i<arr.length; i++){
-            if(num2%arr[i]==0)
-                res = "YES";
-        }
-        System.out.println(res);
-
+//        Scanner sc=new Scanner(System.in);
+//        int c=0;
+//        int n=sc.nextInt();
+//        int a[]=new int[n+1];
+//        for (int i=0;i<n;i++){
+//            a[i]=sc.nextInt();
+//        }for (int i=0;i<n;i++){
+//            if (a[i]==a[i+1]){
+//                continue;
+//            }
+//            c++;
+//        }
+//        System.out.println(c);
     }
 }
