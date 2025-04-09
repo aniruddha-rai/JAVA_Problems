@@ -40,7 +40,7 @@ public class P4_Array_2D {
         int[][] arrTranspose = new int[row2][col2];
         for (int i=0;i<row;i++) {
             for (int j=0;j<col;j++) {
-                arrTranspose[i][j] =  arr[i][j];
+                arrTranspose[j][i] =  arr[i][j];
             }
         }
 
