@@ -296,41 +296,66 @@ public class CF {
 //        }
 //        System.out.println(res);
 
-//        30
-//        10 10 10 10 10 10 01 01 01 10 01 10 01 01 01 01 01 10 10 10 10 01 01 01 10 10 10 01 01 01
-        // 344A - Magnets
-        Scanner read = new Scanner(System.in);
-        int numOfMagnets = read.nextInt();
-        int count = 1;
-        int[] arrOfMagnets = new int[numOfMagnets];
-        for (int i=0;i<numOfMagnets;i++) {
-            arrOfMagnets[i] = read.nextInt();
-        }
-        for (int j=0;j<arrOfMagnets.length-1;j++) {
-//            if (arrOfMagnets[j] != arrOfMagnets[j+1]) {
-//                count++;
-//            }
-            if (arrOfMagnets[j] == arrOfMagnets[j+1]) {
-                continue;
-            }
-            count++;
-        }
-        System.out.println("Number of groups of magnets are " + count);
 
-        // <<<<<<< ----- OR ----- >>>>>>>
 
-//        Scanner sc=new Scanner(System.in);
-//        int c=0;
-//        int n=sc.nextInt();
-//        int a[]=new int[n+1];
-//        for (int i=0;i<n;i++){
-//            a[i]=sc.nextInt();
-//        }for (int i=0;i<n;i++){
-//            if (a[i]==a[i+1]){
+//        // 344A - Magnets
+//        Scanner read = new Scanner(System.in);
+//        int numOfMagnets = read.nextInt();
+//        int count = 1;
+//        int[] arrOfMagnets = new int[numOfMagnets];
+//        for (int i=0;i<numOfMagnets;i++) {
+//            arrOfMagnets[i] = read.nextInt();
+//        }
+//        for (int j=0;j<arrOfMagnets.length-1;j++) {
+////            if (arrOfMagnets[j] != arrOfMagnets[j+1]) {
+////                count++;
+////            }
+//            if (arrOfMagnets[j] == arrOfMagnets[j+1]) {
 //                continue;
 //            }
-//            c++;
+//            count++;
 //        }
-//        System.out.println(c);
+//        System.out.println("Number of groups of magnets are " + count);
+//
+//        // <<<<<<< ----- OR ----- >>>>>>>
+//
+////        Scanner sc=new Scanner(System.in);
+////        int c=0;
+////        int n=sc.nextInt();
+////        int a[]=new int[n+1];
+////        for (int i=0;i<n;i++){
+////            a[i]=sc.nextInt();
+////        }for (int i=0;i<n;i++){
+////            if (a[i]==a[i+1]){
+////                continue;
+////            }
+////            c++;
+////        }
+////        System.out.println(c);
+
+
+
+//        // 486A - Calculating Function
+//        Scanner read = new Scanner(System.in);
+//        long num = read.nextLong();
+//        int result = 0;
+//        int n = 1;
+//        for (int i=0;i<num;i++) {
+//            if (n % 2 != 0)
+//                result += (-n);
+//            else
+//                result += n;
+//            n++;
+//        }
+//        System.out.println(result);
+
+        Scanner read = new Scanner(System.in);
+        long num = read.nextLong();
+        long result = 0;
+        if (num%2 == 0) result = num/2;
+        else result = (-1)*(num/2 + 1);
+        System.out.println(result);
+
+
     }
 }
