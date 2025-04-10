@@ -334,27 +334,54 @@ public class CF {
 ////        System.out.println(c);
 
 
-
-//        // 486A - Calculating Function
+////        // 486A - Calculating Function
+////        Scanner read = new Scanner(System.in);
+////        long num = read.nextLong();
+////        int result = 0;
+////        int n = 1;
+////        for (int i=0;i<num;i++) {
+////            if (n % 2 != 0)
+////                result += (-n);
+////            else
+////                result += n;
+////            n++;
+////        }
+////        System.out.println(result);
+//
 //        Scanner read = new Scanner(System.in);
 //        long num = read.nextLong();
-//        int result = 0;
-//        int n = 1;
-//        for (int i=0;i<num;i++) {
-//            if (n % 2 != 0)
-//                result += (-n);
-//            else
-//                result += n;
-//            n++;
-//        }
+//        long result = 0;
+//        if (num%2 == 0) result = num/2;
+//        else result = (-1)*(num/2 + 1);
 //        System.out.println(result);
 
+
+        // 479A - Expression
         Scanner read = new Scanner(System.in);
-        long num = read.nextLong();
-        long result = 0;
-        if (num%2 == 0) result = num/2;
-        else result = (-1)*(num/2 + 1);
-        System.out.println(result);
+        int a = read.nextInt();
+        int b = read.nextInt();
+        int c = read.nextInt();
+
+        int[] arr = new int[6];
+        arr[0] = a+b+c;
+        arr[1] = a*b*c;
+        arr[2] = a*(b+c);
+        arr[3] = a+(b*c);
+        arr[4] = (a+b)*c;
+        arr[5] = (a*b)+c;
+        int max = 0;
+//        int max1 = a+b+c;
+//        int max2 = a*b*c;
+//        int max3 = a*(b+c);
+//        int max4 = a+(b*c);
+//        int max5 = (a+b)*c;
+//        int max6 = (a*b)+c;
+        for (int i=0;i<6;i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        System.out.println(max);
 
 
     }
