@@ -402,30 +402,55 @@ public class CF {
 //        System.out.println(result);
 
 
-        // 148A - Insomnia cure
-        Scanner read = new Scanner(System.in);
-        int damage1 = read.nextInt();
-        int damage2 = read.nextInt();
-        int damage3 = read.nextInt();
-        int damage4 = read.nextInt();
-        int totalDragons = read.nextInt();
-        int damagedDragons = 0;
+//        // 148A - Insomnia cure
+//        Scanner read = new Scanner(System.in);
+//        int damage1 = read.nextInt();
+//        int damage2 = read.nextInt();
+//        int damage3 = read.nextInt();
+//        int damage4 = read.nextInt();
+//        int totalDragons = read.nextInt();
+//        int damagedDragons = 0;
+//
+//        for (int i=1;i<=totalDragons;i++) {
+//            if (i % damage1 == 0)
+//                damagedDragons++;
+//            else if (i % damage2 == 0)
+//                damagedDragons++;
+//            else if (i % damage3 == 0)
+//                damagedDragons++;
+//            else if (i % damage4 == 0)
+//                damagedDragons++;
+//            else if (damagedDragons >= totalDragons) {
+//                //count = totalDragons;
+//                break;
+//            }
+//        }
+//        System.out.println(damagedDragons);
 
-        for (int i=1;i<=totalDragons;i++) {
-            if (i % damage1 == 0)
-                damagedDragons++;
-            else if (i % damage2 == 0)
-                damagedDragons++;
-            else if (i % damage3 == 0)
-                damagedDragons++;
-            else if (i % damage4 == 0)
-                damagedDragons++;
-            else if (damagedDragons >= totalDragons) {
-                //count = totalDragons;
-                break;
+
+        // 158B - Taxi
+        Scanner read = new Scanner(System.in);
+        int numOfGroup = read.nextInt();
+        int[] numOfChildren = new int[numOfGroup];
+        int numOfTaxi = 0;
+        int count = 0;
+
+        for (int i=0;i<numOfGroup;i++) {
+            numOfChildren[i] = read.nextInt();
+        }
+
+        // for (int i=0;i<numOfChildren.length;i++) { 3 - 3, 3, 2
+        // ---> Answer should be 3 not 2 for this case got stuck on #test 37
+        // IMP CONDITION: if all members of each group should ride in the same taxi (but one taxi can take more than one group)?
+        for (int numOfChild : numOfChildren) {
+            count += numOfChild;
+            if (count >= 4) {       // Max seating capacity of taxi is 4
+                numOfTaxi++;
+                count -= 4;
             }
         }
-        System.out.println(damagedDragons);
-
+        if (count != 0 && count < 4)
+            numOfTaxi++;
+        System.out.println(numOfTaxi);
     }
 }
