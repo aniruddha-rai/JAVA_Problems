@@ -356,32 +356,50 @@ public class CF {
 //        System.out.println(result);
 
 
-        // 479A - Expression
-        Scanner read = new Scanner(System.in);
-        int a = read.nextInt();
-        int b = read.nextInt();
-        int c = read.nextInt();
+//        // 479A - Expression
+//        Scanner read = new Scanner(System.in);
+//        int a = read.nextInt();
+//        int b = read.nextInt();
+//        int c = read.nextInt();
+//
+//        int[] arr = new int[6];
+//        arr[0] = a+b+c;
+//        arr[1] = a*b*c;
+//        arr[2] = a*(b+c);
+//        arr[3] = a+(b*c);
+//        arr[4] = (a+b)*c;
+//        arr[5] = (a*b)+c;
+//        int max = 0;
+////        int max1 = a+b+c;
+////        int max2 = a*b*c;
+////        int max3 = a*(b+c);
+////        int max4 = a+(b*c);
+////        int max5 = (a+b)*c;
+////        int max6 = (a*b)+c;
+//        for (int i=0;i<6;i++) {
+//            if (arr[i] > max) {
+//                max = arr[i];
+//            }
+//        }
+//        System.out.println(max);
 
-        int[] arr = new int[6];
-        arr[0] = a+b+c;
-        arr[1] = a*b*c;
-        arr[2] = a*(b+c);
-        arr[3] = a+(b*c);
-        arr[4] = (a+b)*c;
-        arr[5] = (a*b)+c;
-        int max = 0;
-//        int max1 = a+b+c;
-//        int max2 = a*b*c;
-//        int max3 = a*(b+c);
-//        int max4 = a+(b*c);
-//        int max5 = (a+b)*c;
-//        int max6 = (a*b)+c;
-        for (int i=0;i<6;i++) {
-            if (arr[i] > max) {
-                max = arr[i];
-            }
+
+        // 705A - Hulk
+        Scanner read = new Scanner(System.in);
+        int numOfFeelings = read.nextInt();
+        StringBuilder result = new StringBuilder("");
+
+        for (int i=1;i<=numOfFeelings;i++) {
+            if (i == 1)
+                result.append("I hate it");
+            if (i == 2)
+                result.replace(result.length()-3, result.length(), " that I love it");
+            if (i != 1 && i % 2 != 0)
+                result.replace(result.length()-3, result.length(), " that I hate it");
+            if (i != 2 && i % 2 == 0)
+                result.replace(result.length()-3, result.length(), " that I love it");
         }
-        System.out.println(max);
+        System.out.println(result);
 
 
     }
