@@ -384,23 +384,48 @@ public class CF {
 //        System.out.println(max);
 
 
-        // 705A - Hulk
+//        // 705A - Hulk
+//        Scanner read = new Scanner(System.in);
+//        int numOfFeelings = read.nextInt();
+//        StringBuilder result = new StringBuilder("");
+//
+//        for (int i=1;i<=numOfFeelings;i++) {
+//            if (i == 1)
+//                result.append("I hate it");
+//            if (i == 2)
+//                result.replace(result.length()-3, result.length(), " that I love it");
+//            if (i != 1 && i % 2 != 0)
+//                result.replace(result.length()-3, result.length(), " that I hate it");
+//            if (i != 2 && i % 2 == 0)
+//                result.replace(result.length()-3, result.length(), " that I love it");
+//        }
+//        System.out.println(result);
+
+
+        // 148A - Insomnia cure
         Scanner read = new Scanner(System.in);
-        int numOfFeelings = read.nextInt();
-        StringBuilder result = new StringBuilder("");
+        int damage1 = read.nextInt();
+        int damage2 = read.nextInt();
+        int damage3 = read.nextInt();
+        int damage4 = read.nextInt();
+        int totalDragons = read.nextInt();
+        int damagedDragons = 0;
 
-        for (int i=1;i<=numOfFeelings;i++) {
-            if (i == 1)
-                result.append("I hate it");
-            if (i == 2)
-                result.replace(result.length()-3, result.length(), " that I love it");
-            if (i != 1 && i % 2 != 0)
-                result.replace(result.length()-3, result.length(), " that I hate it");
-            if (i != 2 && i % 2 == 0)
-                result.replace(result.length()-3, result.length(), " that I love it");
+        for (int i=1;i<=totalDragons;i++) {
+            if (i % damage1 == 0)
+                damagedDragons++;
+            else if (i % damage2 == 0)
+                damagedDragons++;
+            else if (i % damage3 == 0)
+                damagedDragons++;
+            else if (i % damage4 == 0)
+                damagedDragons++;
+            else if (damagedDragons >= totalDragons) {
+                //count = totalDragons;
+                break;
+            }
         }
-        System.out.println(result);
-
+        System.out.println(damagedDragons);
 
     }
 }
