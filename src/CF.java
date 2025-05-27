@@ -428,29 +428,52 @@ public class CF {
 //        System.out.println(damagedDragons);
 
 
-        // 158B - Taxi
+//        // 158B - Taxi
+//        Scanner read = new Scanner(System.in);
+//        int numOfGroup = read.nextInt();
+//        int[] numOfChildren = new int[numOfGroup];
+//        int numOfTaxi = 0;
+//        int count = 0;
+//
+//        for (int i=0;i<numOfGroup;i++) {
+//            numOfChildren[i] = read.nextInt();
+//        }
+//
+//        // for (int i=0;i<numOfChildren.length;i++) { 3 - 3, 3, 2
+//        // ---> Answer should be 3 not 2 for this case got stuck on #test 37
+//        // IMP CONDITION: if all members of each group should ride in the same taxi (but one taxi can take more than one group)?
+//        for (int numOfChild : numOfChildren) {
+//            count += numOfChild;
+//            if (count >= 4) {       // Max seating capacity of taxi is 4
+//                numOfTaxi++;
+//                count -= 4;
+//            }
+//        }
+//        if (count != 0 && count < 4)
+//            numOfTaxi++;
+//        System.out.println(numOfTaxi);
+
+
+        // 230B T-primes
         Scanner read = new Scanner(System.in);
-        int numOfGroup = read.nextInt();
-        int[] numOfChildren = new int[numOfGroup];
-        int numOfTaxi = 0;
-        int count = 0;
+        int num = read.nextInt();
+        long[] arr = new long[num];
 
-        for (int i=0;i<numOfGroup;i++) {
-            numOfChildren[i] = read.nextInt();
+        for (int i=0;i<arr.length;i++) {
+            arr[i] = read.nextLong();
         }
 
-        // for (int i=0;i<numOfChildren.length;i++) { 3 - 3, 3, 2
-        // ---> Answer should be 3 not 2 for this case got stuck on #test 37
-        // IMP CONDITION: if all members of each group should ride in the same taxi (but one taxi can take more than one group)?
-        for (int numOfChild : numOfChildren) {
-            count += numOfChild;
-            if (count >= 4) {       // Max seating capacity of taxi is 4
-                numOfTaxi++;
-                count -= 4;
+        for (int i=0;i<arr.length;i++) {
+            int count = 0;
+            for (int j=1;j<=arr[i];j++) {
+                if (arr[i] % j == 0)
+                    count++;
             }
+            if (count == 3)
+                System.out.println("YES");
+            else
+                System.out.println("NO");
         }
-        if (count != 0 && count < 4)
-            numOfTaxi++;
-        System.out.println(numOfTaxi);
+
     }
 }
